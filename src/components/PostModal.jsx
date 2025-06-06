@@ -33,7 +33,8 @@ const PostModal = (props) => {
   }
 
   return (
-    <dialog id="postModal" className="modal" open>
+    <div className='inset-0 bg-black/60 backdrop-blur-[2px] fixed top-0 left-0 w-full h-full flex items-center justify-center z-50'>
+    <dialog id="postModal" className="modal z-50" open>
       <button
         id="closeModal"
         className="btn btn-light btn-close delete-icon"
@@ -92,6 +93,7 @@ const PostModal = (props) => {
         <button type="submit" className="btn btn-dark">Post</button>
       </form>
     </dialog>
+    </div>
   )
 }
 

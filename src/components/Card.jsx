@@ -45,25 +45,26 @@ const Card = (props) => {
                             // Filled like icon when liked
                             <Icon
                                 icon="weui:like-filled"
-                                width="30"
-                                height="30"
-                                style={{ color: "red" }}
+                                width="32"
+                                height="32"
+                                style={{ color: "red", marginTop: "-4px" }}
                             />
                         ) : (
                             // Outlined like icon when not liked
                             <Icon
                                 icon="weui:like-outlined"
-                                width="30"
-                                height="30"
-                                style={{ color: "gray" }}
+                                width="32"
+                                height="32"
+                                className="like-icon -z-10"
                             />
                         )}
+                        {/* style={{ color: "gray" }} */}
                     </div>
                 </div>
             </article>
 
             {/* Preview modal, shown when isPreviewable is true */}
-            {isPreviewable && (
+            {isPreviewable && (<div className='inset-0 bg-black/60 backdrop-blur-[2px] fixed top-0 left-0 w-full h-full flex items-center justify-center z-50'>
                 <dialog
                     className="previewable-modal modal"
                     aria-label="previewable-modal"
@@ -77,7 +78,7 @@ const Card = (props) => {
                         aria-label="Close preview"
                         onClick={handleClosePreview}
                     >
-                    ✕
+                        ✕
                     </button>
                     {/* Modal content, stops click propagation to avoid closing modal */}
                     <div className="previewable-images" onClick={e => e.stopPropagation()}>
@@ -91,6 +92,7 @@ const Card = (props) => {
                         <p className="previewable-title">{props.title}</p>
                     </div>
                 </dialog>
+            </div>
             )}
         </>
     );

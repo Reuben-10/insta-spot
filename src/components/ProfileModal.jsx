@@ -33,6 +33,7 @@ const ProfileModal = (props) => {
   }
 
   return (
+    <div className='inset-0 bg-black/60 backdrop-blur-[2px] fixed top-0 left-0 w-full h-full flex items-center justify-center z-50'>
     <dialog className="modal" id="editModal" aria-label="modal-section" open>
       <button className="btn btn-close btn-light delete-icon" id="cancelBtn" type="button" onClick={props.closeModal}>✕</button>
       <form noValidate className="modal-form" id="editForm" onSubmit={handleSave}>
@@ -80,13 +81,14 @@ const ProfileModal = (props) => {
             <img
               src={form.profileImage}
               alt="Profile Preview"
-              style={{ width: 80, height: 80, borderRadius: '50%', marginTop: 8 }}
-            />
+              style={{ width: 80, height: 80, borderRadius: '50 % ', marginTop: 8 }}
+    />
           )}
-        </div>
-        <button type="submit" className="btn btn-dark" id="saveBtn">Save</button>
-      </form>
-    </dialog>
+        </div >
+  <button type="submit" className="btn btn-dark" id="saveBtn">Save</button>
+      </form >
+    </dialog >
+    </div >
   )
 }
 
