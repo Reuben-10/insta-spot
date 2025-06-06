@@ -7,7 +7,7 @@ const Header = (props) => {
     const [profile, setProfile] = useState({
         name: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus nam repellat sint laborum ratione, porro molestias minima ad tempora! Dolorem inventore ipsum corrupti alias sapiente at, atque quidem nemo fuga.",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, maiores rem velit minus accusantium voluptas officiis totam praesentium eaque ipsum! Sed is tempore doloribus ipsa quasi reiciendis labore, neque dicta!",
-        profileImage: "src/assets/images/avatar.png"
+        profileImage: "/assets/images/avatar.png"
     })
 
     const [profileModal, setProfileModal] = useState(false)
@@ -30,7 +30,7 @@ const Header = (props) => {
                     <img
                         className="avatar-img"
                         id="profileImage"
-                        src={profile.profileImage || "src/assets/images/avatar.png"}
+                        src={profile.profileImage || "/assets/images/avatar.png"}
                         alt={`Profile image of ${profile.name || "User"}`}
                         loading="lazy"
                     />
@@ -49,7 +49,7 @@ const Header = (props) => {
                             aria-label="Edit profile"
                             onClick={openProfileModal}
                         >
-                            <img src="src/assets/icons/edit.svg" alt="edit icon" />
+                            <img src="/assets/icons/edit.svg" alt="edit icon" />
                             Edit Profile
                         </button>
                     </div>
@@ -62,7 +62,7 @@ const Header = (props) => {
                     aria-label="Create new post"
                     onClick={openPostModal}
                 >
-                    <img src="src/assets/icons/plus.svg" alt="+" />
+                    <img src="/assets/icons/plus.svg" alt="+" />
                     New Post
                 </button>
             </div>
